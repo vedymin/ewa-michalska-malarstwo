@@ -1,50 +1,53 @@
 h1 {
   font-family: "Poiret One", cursive;
   font-size: 5rem;
+  text-transform: uppercase;
 }
 
 h2 {
   font-family: "Chivo", cursive;
-  font-size: 3rem;
-  text-transform: uppercase;
+  font-size: 1.6rem;
 }
 
-header {
-  font-size: 1.6rem;
-  padding-top: 2rem;
-  padding-left: 1rem;
+body {
+  background-color: #000;
+}
+
+.container {
+  color: white;
+  background: black;
+  height: 130px;
+  // border-bottom: solid black 20px;
+  padding: 0;
+  margin: 0;
   display: flex;
-  align-items: baseline;
+  flex-direction: row;
   justify-content: space-between;
-  border-bottom: 2px solid rgb(0, 0, 0);
+  align-items: flex-end;
 
-  // Flex-wrapper is needed for align-items to the last baseline in the header h1.
-  // more here: https://stackoverflow.com/questions/32209427/align-flex-box-items-to-baseline-of-last-text-line-in-a-block
-  // .flex-wrapper {
-  //   display: inline-block;
-  // }
+  .name {
+    padding-left: 15px;
+    padding-bottom: 10px;
+  }
 
-  ul {
-    font-family: "Chivo", sans-serif;
+  .navigation {
     display: flex;
 
-    li {
-      padding: 1rem 0;
-      a {
-        padding: 1rem 1rem;
-        border-bottom: 2px solid rgba(255, 255, 255, 0);
-        transition: border-bottom 0.3s;
-      }
+    h2 {
+      padding: 13px 18px;
+      border-bottom: 2px solid #000;
+      cursor: pointer;
     }
 
-    a.active {
+    h2:hover {
       border-bottom: 2px solid rgb(255, 255, 255);
-    }
-
-    a:hover {
-      border-bottom: 2px solid rgb(255, 255, 255);
+      transition: border-bottom 0.3s;
     }
   }
+}
+
+.active{
+  border-bottom: 2px solid rgb(255, 255, 255) !important;
 }
 
 @media (max-width: 1450px) {

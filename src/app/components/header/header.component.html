@@ -1,8 +1,8 @@
 <div class="container">
-  <div class="name">Ewa Michalska</div>
+  <h1 class="name">EWA MICHALSKA</h1>
   <div class="navigation">
     <div *ngFor="let item of navItems">
-      <div>{{ item.tytul }}</div>
+      <h2 [routerLink]="item.route" [class.active]="route === '/' + item.route">{{ item.title }}</h2>
     </div>
   </div>
 </div>
